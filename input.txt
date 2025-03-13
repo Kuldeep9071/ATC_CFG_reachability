@@ -1,0 +1,13 @@
+3
+S->AB|BA|SS|AC|BD;A->a;B->b;C->SB;D->SA
+PQ:a QR:a RT:b TK:b KL:a LM:b
+P
+M
+S -> AB;A -> a;B -> BC| b;C -> c
+PQ:a QR:b RT:c 
+P
+T
+S -> AB;A -> a;B -> BC| b;C -> c
+PQ:a QR:c RT:b
+P
+T
