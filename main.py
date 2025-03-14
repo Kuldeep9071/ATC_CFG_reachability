@@ -49,6 +49,8 @@ def CKY(cfg, path):
         
     
 def check_reachability(cfg, graph, start_vertex, end_vertex):
+    if start_vertex == end_vertex:
+        return False
     paths = []
     visited = {}
     DFS(graph, start_vertex, end_vertex, visited, '', paths)
