@@ -1,6 +1,7 @@
 from helpers import CFG
 from helpers import Graph
 
+# DFS to enumerate all paths from start_vertex to end_vertex
 def DFS(graph, start_vertex, end_vertex, visited, string, paths):
     if start_vertex == end_vertex:
         paths.append(string)
@@ -13,6 +14,9 @@ def DFS(graph, start_vertex, end_vertex, visited, string, paths):
             DFS(graph, vertex[0], end_vertex, visited, string + vertex[1], paths)
 
     visited[start_vertex] = False  # Backtrack
+
+
+# Cocke–Younger–Kasami Algorithm
 
 def CKY(cfg, path):
     n = len(path)
@@ -49,6 +53,7 @@ def CKY(cfg, path):
         
     
 def check_reachability(cfg, graph, start_vertex, end_vertex):
+    # Epsilon Case
     if start_vertex == end_vertex:
         return False
     paths = []
